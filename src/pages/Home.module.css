@@ -1,0 +1,29 @@
+.home {
+    padding: 210px 0 32px 0;
+}
+
+.banner {
+    color: white;
+}
+
+.bannerInfor {
+    margin-left: 50px;
+}
+
+.heading {
+    font-size: 3.4rem;
+    font-weight: 500;
+}
+
+.headingName {
+    font-size: 3.8rem;
+    font-weight: 600;
+
+}
+
+.typeWriter {
+    font-size: 3.0rem;
+    font-weight: 600;
+    margin-top: 70px;
+    color: var(--primary-color);
+}   

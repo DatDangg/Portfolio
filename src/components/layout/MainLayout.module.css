@@ -1,0 +1,52 @@
+.sky {
+    width: 100%;
+    height: 100%;
+}
+
+.star {
+    width: 1px;
+    height: 1px;
+    border-radius: 100%;
+    background-color: white;
+    position: absolute;
+    animation: twinkle 3s infinite;
+    opacity: 0.5;
+}
+
+@keyframes twinkle {
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.shootstar {
+    width: 150px;
+    height: 1px;
+    background: linear-gradient(to left, white, transparent);
+    position: absolute;
+    transform: rotate(135deg);
+    /* animation: shoot 5s infinite ease-out; */
+}
+
+.flash {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-image: url("../../assets/image/star-four-point.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    animation: flashEffect 0.2s ease-out;
+    /* opacity: 1; */
+  }
+  
+  @keyframes flashEffect {
+    from { opacity: 1; transform: scale(0.6); }
+    to { opacity: 1; transform: scale(1.2); }
+  }
+  
