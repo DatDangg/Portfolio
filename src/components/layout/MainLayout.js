@@ -12,7 +12,7 @@ const MainLayout = ({ children }) => {
       sky.innerHTML = "";
       const width = document.body.scrollWidth;
       const height = document.body.scrollHeight;
-      console.log(width, height)
+
       const star_count = Math.max((width + height)/9, 100);
       for (let i = 0; i < star_count; i++) {
         const star = document.createElement("div");
