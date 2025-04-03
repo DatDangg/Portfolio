@@ -110,12 +110,12 @@ function Header() {
               <li>
                 <a
                   className={styles.github_button}
+                  target="_blank" 
+                  rel="noopener noreferrer"
                   href="https://github.com/DatDangg"
                 >
                   <svg
                     viewBox="0 0 24 24"
-                    height="1em"
-                    width="1em"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
