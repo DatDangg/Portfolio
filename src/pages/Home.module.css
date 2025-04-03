@@ -1,10 +1,10 @@
 .home {
-    padding: 150px 0 32px 0;
+    padding-top: 200px;
 }
 
 .banner {
     color: white;
-    padding-bottom: 1500px;
+    padding-bottom: 100px;
 }
 
 .bannerInfor {
@@ -12,12 +12,12 @@
 }
 
 .heading {
-    font-size: 3.4rem;
+    font-size: 3.8rem;
     font-weight: 500;
 }
 
 .headingName {
-    font-size: 3.8rem;
+    font-size: 4.2rem;
     font-weight: 600;
     text-transform: uppercase;
 }
@@ -27,7 +27,7 @@
 }
 
 .typeWriter {
-    font-size: 3.0rem;
+    font-size: 3.6rem;
     font-weight: 600;
     margin-top: 70px;
     color: var(--primary-color);
@@ -43,11 +43,10 @@
     display: inline-block;
     animation: blink 1s step-start infinite;
     color: var(--primary-color);
-  }
+}
   
-  @keyframes blink {
+@keyframes blink {
     50% {
-      opacity: 0;
+        opacity: 0;
     }
-  }
-  
+}

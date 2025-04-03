@@ -4,11 +4,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: 
-  linear-gradient(to bottom left, hsla(0, 3%, 6%, 0.678), rgba(12, 10, 22, 0.863)),
+  linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)),
   linear-gradient(270deg, #1b1429, #140f23);
   background-repeat: no-repeat;
   background-size: cover;      
-  /* background-attachment: local;  */
+
   background-position: center; 
 }
 
