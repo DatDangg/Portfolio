@@ -1,13 +1,27 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./Header.module.css";
 
 function Header() {
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(()=> {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  },[])
+
   return (
-    <div className={styles.header}>
+    <div className={`${styles.header} ${scrolled ? `${styles.scroll}` : ''}`}>
       <div className="container">
         <div className="row">
-          <div className={`col-lg-4 ${styles.logo}`}>LAY</div>
+          <div className={`col-lg-4 ${styles.logo}`}>
+            <Link to="/">LAY</Link>
+          </div>
           <div className={`col-lg-8 ${styles.nav}`}>
             <ul className={styles.nav_list}>
               <li>

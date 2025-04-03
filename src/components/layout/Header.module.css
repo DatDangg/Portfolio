@@ -1,17 +1,27 @@
 .header {
     backdrop-filter: blur(5px);
-    background-color: #1b1a2ea9;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    height: 64px;
+    height: 68px;
+    transition: all 0.3s ease;
+}
+
+.header.scroll {
+    background-color: #1b1a2ea9;
+    background-image: none;
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
     font-size: 2.4rem;
     font-weight: 700;
-    margin: auto;
     color: var(--primary-color);
 }
 
