@@ -52,17 +52,17 @@ const MainLayout = ({ children }) => {
     
       // Tính delta theo góc 135 độ
       const distance = height/2;
-      const angle = 135 * (Math.PI / 180);
+      const angle = 145 * (Math.PI / 180);
       const dx = Math.cos(angle) * distance; // x: bay trái
       const dy = Math.sin(angle) * distance; // y: bay xuống
     
       const animation = shootstar.animate(
         [
-          { transform: `translate(0, 0) rotate(135deg)`, opacity: 1 },
-          { transform: `translate(${dx}px, ${dy}px) rotate(135deg)`, opacity: 1 },
+          { transform: `translate(0, 0) rotate(145deg)`, opacity: 1 },
+          { transform: `translate(${dx}px, ${dy}px) rotate(145deg)`, opacity: 1 },
         ],
         {
-          duration: 2000,
+          duration: 3000,
           easing: "linear",
           fill: "forwards",
         }
@@ -87,7 +87,7 @@ const MainLayout = ({ children }) => {
       if (Math.random() < 0.4) {
         creatShootstar();
       }
-    }, 4000);
+    }, 2000);
 
     window.addEventListener("resize", resizeHandler);
 
