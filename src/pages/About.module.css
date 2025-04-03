@@ -1,0 +1,70 @@
+.about {
+    padding-top: 150px;
+    color: var(--white-color);
+}
+
+.about span {
+    color: var(--primary-color);
+}
+
+.aboutInfor {
+    padding: 0 150px;
+}
+
+.aboutTitle {
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: 500;
+    padding-bottom: 40px;
+}
+
+.aboutTitle span {
+    font-weight: 700
+}
+
+.about p {
+    font-size: 2rem;
+    padding-bottom: 12px;
+    text-align: justify;
+}
+
+.quote {
+    color: #c889e6;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.aboutSkill {
+    justify-content: center;
+}
+
+.aboutHeading {
+    text-align: center;
+    font-size: 3.2rem;
+    font-weight: 600;
+    padding: 60px 0 10px;
+}
+
+.aboutIcon {
+    border: 1px solid #c889e6;
+    margin: 15px;
+    vertical-align: middle;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px #6b17d1;
+}
+
+.aboutIcon:hover {
+    transform: scale(1.05);
+
+}
+
+.aboutIcon svg {
+    font-size: 72px;
+}
+
+.aboutTool {
+    justify-content: center;
+}
