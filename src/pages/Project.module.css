@@ -1,7 +1,91 @@
-.project {
-    margin-top: 64px;
-    font-size: 24px;
-    color: transparent;
-    /* height: 5000px; */
-    /* background-color: red; */
+.projects {
+    padding-top: 150px;
+    color: var(--white-color);
+}
+
+.projects span {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.projectsTitle {
+    text-align: center;
+
+}
+
+.projectsHeading {
+    font-size: 3.8rem;
+    font-weight: 500;
+}
+
+.projectsDesc {
+    font-size: 2rem;
+}
+
+.projectItem {
+    padding: 40px 18px;
+    height: auto;
+}
+
+.wrapper {
+    margin: 5px;
+    padding: 18px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 6px 5px rgba(119, 53, 136, 0.4);
+    border-radius: 5px;
+    height: 100%;
+    transition: all 0.5s ease;
+}
+
+.wrapper:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 6px 6px rgba(119, 53, 136, 0.8);
+}
+
+.projectImg {
+    width: 100%;
+    opacity: .8;
+}
+
+.projectInfor {
+    padding: 16px 0;
+}
+
+.headerInfor {
+    font-size: 2rem;
+    text-align: center;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.descInfor {
+    padding: 10px 0 20px;
+    font-size: 1.6rem;
+    text-align: justify;
+    word-wrap: break-word;
+}
+
+.buttonInfor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: #9936c0;
+    color: var(--white-color);
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    transition: all 0.5s linear;
+    width: fit-content;
+}
+
+.buttonInfor:hover {
+    background-color: #693cb1;
+    transform: scale(1.1);
+}
+
+.buttonInfor svg{
+    margin-right: 5px;
 }
