@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect, useRef, useState } from "react";
 import styles from "./Home.module.css";
 import bannerImg from "../assets/image/banner-img.png";

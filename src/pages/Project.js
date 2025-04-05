@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./Project.module.css";
 import projectImage from "../assets/image/prj-img.png";
 

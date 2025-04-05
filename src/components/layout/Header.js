@@ -1,6 +1,5 @@
 import { NavLink, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./Header.module.css";
 
 function Header() {

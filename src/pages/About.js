@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import styles from "./About.module.css";
 
 function About() {

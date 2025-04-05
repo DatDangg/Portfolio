@@ -88,3 +88,9 @@
 .buttonInfor svg{
     margin-right: 5px;
 }
+
+@media screen and (max-width: 576px){
+    .projectItem {
+        padding: 30px 25px;
+    }
+}

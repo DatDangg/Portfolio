@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
@@ -8,31 +8,33 @@ import styles from "./Resume.module.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 function Resume() {
-    const containerRef = useRef(null);
-    const [width, setWidth] = useState(800);
+    const [width, setWidth] = useState(window.innerWidth);
 
     useEffect(() => {
-        const updateWidth = () => {
-            if (containerRef.current) {
-                setWidth(containerRef.current.offsetWidth);
-            }
-        };
-
-        updateWidth();
-        window.addEventListener("resize", updateWidth);
-        return () => window.removeEventListener("resize", updateWidth);
+        const handleResize = () => setWidth(window.innerWidth);
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
     }, []);
+
+    const getScale = (width) => {
+        if (width < 400) return 0.4;
+        if (width >= 400 && width < 600) return 0.6;
+        if (width >= 600 && width < 800) return 0.8;
+        if (width >= 800 && width < 1000) return 1;
+        if (width >= 1000 && width < 1200) return 1.4;
+        return 1.7;
+    };
 
     const handleDownload = () => {
         const link = document.createElement("a");
-        link.href = "/resume.docx.pdf"; // Đường dẫn tới file của bạn
+        link.href = "/resume.docx.pdf";
         link.download = "DangTienDat_Resume.pdf";
         link.click();
     };
 
     return (
         <div className={styles.resume}>
-            <div className="container" ref={containerRef}>
+            <div className="container">
                 <div className="row justify-content-center">
                     <button onClick={handleDownload} className={styles.downloadBtn}>
                         <svg viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -50,9 +52,8 @@ function Resume() {
                         <div className={styles.content}>
                             <Page
                                 pageNumber={1}
-                                scale={width > 786 ? 1.7 : 0.6}
+                                scale={getScale(width)}
                             />
-
                         </div>
                     </Document>
                 </div>
