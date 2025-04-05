@@ -7,27 +7,39 @@ function Header() {
   const [scrolled, setScrolled] = useState(false)
 
   useEffect(() => {
-    const navList = document.querySelector(`.${styles.nav_list}`)
-    const navToggle = document.querySelector(`.${styles.navbarToggler}`)
-    const header = document.querySelector(`.${styles.header}`)
-
+    const navList = document.querySelector(`.${styles.nav_list}`);
+    const navItems = document.querySelectorAll(`.${styles.nav_item}`);
+    const gitBtn = document.querySelector(`.${styles.github_button}`);
+    const navToggle = document.querySelector(`.${styles.navbarToggler}`);
+    const header = document.querySelector(`.${styles.header}`);
+  
     const handleToggle = () => {
-      navList.classList.toggle(`${styles.show}`)
-      header.classList.toggle(`${styles.active}`)
-    } 
+      navList.classList.toggle(styles.show);
+      header.classList.toggle(styles.active);
+    };
+  
+    const handleCloseMenu = () => {
+      header.classList.remove(styles.active);
+      navList.classList.remove(styles.show);
+    };
 
-    navToggle.addEventListener('click', handleToggle)
-
+    const clickableElements = [...navItems, gitBtn];
+  
+    navToggle.addEventListener("click", handleToggle);
+    clickableElements.forEach((el) => el.addEventListener("click", handleCloseMenu));
+  
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-
-    window.addEventListener('scroll', handleScroll);
+  
+    window.addEventListener("scroll", handleScroll);
+  
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-      navToggle.removeEventListener('click', handleToggle)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleScroll);
+      navToggle.removeEventListener("click", handleToggle);
+      clickableElements.forEach((el) => el.removeEventListener("click", handleCloseMenu));
+    };
+  }, []);  
 
   return (
     <div className={`${styles.header} ${scrolled ? `${styles.scroll}` : ''}`}>
