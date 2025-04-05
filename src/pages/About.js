@@ -6,7 +6,7 @@ function About() {
         <div className={styles.about}>
             <div className="container">
                 <div className={`row ${styles.aboutInfor}`}>
-                    <div className="col-lg-12">
+                    <div className="col-md-12">
                         <div className={styles.aboutTitle}>
                             Know Who <span>I'M</span>
                         </div>
@@ -54,7 +54,7 @@ function About() {
                     <div className={styles.aboutHeading}>
                         Profesional <span>Skillset</span>
                     </div>
-                    <div className={`col-lg-2 ${styles.aboutIcon}`}>
+                    <div className={`col-md-2 ${styles.aboutIcon}`}>
                         <svg
                             viewBox="0 0 24 24"
                             height="1em"
@@ -75,7 +75,7 @@ function About() {
                             ></path>
                         </svg>
                     </div>
-                    <div className={`col-lg-2 ${styles.aboutIcon}`}>
+                    <div className={`col-md-2 ${styles.aboutIcon}`}>
                         <svg
                             version="1.1"
                             viewBox="0 0 32 32"
@@ -89,7 +89,7 @@ function About() {
                             ></path>
                         </svg>
                     </div>
-                    <div className={`col-lg-2 ${styles.aboutIcon}`}>
+                    <div className={`col-md-2 ${styles.aboutIcon}`}>
                         <svg
                             version="1.1"
                             viewBox="0 0 32 32"
@@ -103,7 +103,7 @@ function About() {
                             ></path>
                         </svg>
                     </div>
-                    <div className={`col-lg-2 ${styles.aboutIcon}`}>
+                    <div className={`col-md-2 ${styles.aboutIcon}`}>
                         <svg
                             role="img"
                             viewBox="0 0 24 24"
@@ -118,7 +118,7 @@ function About() {
                             ></path>
                         </svg>
                     </div>
-                    <div className={`col-lg-2 ${styles.aboutIcon}`}>
+                    <div className={`col-md-2 ${styles.aboutIcon}`}>
                         <svg
                             version="1.1"
                             viewBox="0 0 32 32"
@@ -132,7 +132,7 @@ function About() {
                             ></path>
                         </svg>
                     </div>
-                    <div className={`col-lg-2 ${styles.aboutIcon}`}>
+                    <div className={`col-md-2 ${styles.aboutIcon}`}>
                         <svg
                             version="1.1"
                             viewBox="0 0 32 32"
@@ -151,7 +151,7 @@ function About() {
                     <div className={styles.aboutHeading}>
                         <span>Tools</span> I use
                     </div>
-                    <div className={`col-lg-2 ${styles.aboutIcon}`}>
+                    <div className={`col-md-2 ${styles.aboutIcon}`}>
                         <svg
                             role="img"
                             viewBox="0 0 24 24"
@@ -166,7 +166,7 @@ function About() {
                             ></path>
                         </svg>
                     </div>
-                    <div className={`col-lg-2 ${styles.aboutIcon}`}>
+                    <div className={`col-md-2 ${styles.aboutIcon}`}>
                         <svg
                             role="img"
                             viewBox="0 0 24 24"

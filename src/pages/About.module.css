@@ -8,7 +8,7 @@
 }
 
 .aboutInfor {
-    padding: 0 150px;
+    padding: 0 120px;
 }
 
 .aboutTitle {
@@ -67,4 +67,28 @@
 
 .aboutTool {
     justify-content: center;
+    padding-bottom: 30px;
+}
+
+
+@media screen and (max-width: 992px) {
+    .aboutInfor {
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about {
+        padding-top: 120px;
+    }
+
+    .aboutInfor {
+        padding: 0 15px;
+    }
+    
+    .aboutSkill,
+    .aboutTool {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }

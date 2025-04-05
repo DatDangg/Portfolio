@@ -1,66 +1,71 @@
-import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useEffect, useRef, useState } from "react";
 import styles from "./Home.module.css";
 import bannerImg from "../assets/image/banner-img.png";
 
 function TypeWriter({ texts }) {
-    const [char, setChar] = useState([]);
+    const [displayText, setDisplayText] = useState("");
+    const [isDeleting, setIsDeleting] = useState(false);
+    const [textIndex, setTextIndex] = useState(0);
+    const [charIndex, setCharIndex] = useState(0);
+
+    const timeoutRef = useRef(null);
 
     useEffect(() => {
-        let count = 0;
-        function sleep(ms) {
-            return new Promise((resolve) => setTimeout(resolve, ms));
-        }
+        const currentText = texts[textIndex];
+        const isEnd = !isDeleting && charIndex === currentText.length;
+        const isStart = isDeleting && charIndex === 0;
 
-        async function typeLoop() {
-            while (true) {
-                const currentText = texts[count];
-
-                for (let i = 0; i < currentText.length; i++) {
-                    setChar((prev) => [...prev, currentText[i]]);
-                    await sleep(150);
-                }
-
-                await sleep(1000);
-
-                for (let i = currentText.length; i >= 0; i--) {
-                    setChar((prev) => prev.slice(0, i));
-                    await sleep(100);
-                }
-
-                count++;
-                if (count === texts.length) count = 0;
-                await sleep(500);
+        const type = () => {
+            if (isEnd) {
+                setTimeout(() => setIsDeleting(true), 1000);
+                return;
             }
-        }
-        typeLoop();
-    }, []);
+
+            if (isStart) {
+                setIsDeleting(false);
+                setTextIndex((prev) => (prev + 1) % texts.length);
+                return;
+            }
+
+            const nextCharIndex = isDeleting ? charIndex - 1 : charIndex + 1;
+            setCharIndex(nextCharIndex);
+            setDisplayText(currentText.substring(0, nextCharIndex));
+
+            timeoutRef.current = setTimeout(type, isDeleting ? 100 : 150);
+        };
+
+        timeoutRef.current = setTimeout(type, 150);
+
+        return () => clearTimeout(timeoutRef.current);
+    }, [charIndex, isDeleting, textIndex, texts]);
 
     return (
         <span>
-            {char}
+            {displayText}
             <span className={styles.cursor}>|</span>
         </span>
     );
 }
+
 
 function Home() {
     return (
         <div className={styles.home}>
             <div className="container">
                 <div className={`row ${styles.banner}`}>
-                    <div className="col-lg-7">
+                    <div className="col-md-7">
                         <div className={styles.bannerInfor}>
                             <div className={styles.heading}>Hi There!</div>
                             <div className={styles.headingName}>
                                 I'm <span>Dang Dat</span>
                             </div>
                             <div className={styles.typeWriter}>
-                                <TypeWriter texts={["Front End Developer"]} />
+                                <TypeWriter texts={["Front End Developer", "Team Leader"]} />
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-5">
+                    <div className="col-md-5">
                         <img
                             className={styles.bannerImg}
                             src={bannerImg}

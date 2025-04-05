@@ -1,15 +1,17 @@
 import { useEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
 import styles from "./MainLayout.module.css";
 
 const MainLayout = ({ children }) => {
   const skyRef = useRef(null);
-
+  const resizeObserverRef = useRef(null);
+  const location = useLocation();
   useEffect(() => {
     const sky = skyRef.current;
 
     function createStar() {
       if (!sky) return;
-      sky.innerHTML = "";
+      sky.querySelectorAll(`.${styles.star}`).forEach((el) => el.remove());
       const width = document.body.scrollWidth;
       const height = document.body.scrollHeight;
 
@@ -49,12 +51,10 @@ const MainLayout = ({ children }) => {
       shootstar.style.left = `${left}px`;
       shootstar.style.top = `${top}px`;
     
-    
-      // Tính delta theo góc 135 độ
       const distance = height/2;
       const angle = 145 * (Math.PI / 180);
-      const dx = Math.cos(angle) * distance; // x: bay trái
-      const dy = Math.sin(angle) * distance; // y: bay xuống
+      const dx = Math.cos(angle) * distance; 
+      const dy = Math.sin(angle) * distance; 
     
       const animation = shootstar.animate(
         [
@@ -76,26 +76,32 @@ const MainLayout = ({ children }) => {
       };
     }
     
-
-    createStar();
-    const resizeHandler = () => {
-      createStar();
-      creatShootstar();
-    };
-    
     const interval = setInterval(() => {
       if (Math.random() < 0.4) {
         creatShootstar();
       }
     }, 2000);
 
+    createStar();
+    
+    const resizeHandler = () => {
+      createStar();
+      creatShootstar();
+    };
+    
     window.addEventListener("resize", resizeHandler);
 
+    resizeObserverRef.current = new ResizeObserver(() => {
+      createStar();
+    });
+
+    resizeObserverRef.current.observe(document.body); // hoặc document.querySelector('#root')
+
     return () => {
-      window.removeEventListener("resize", resizeHandler);
+      resizeObserverRef.current?.disconnect();
       clearInterval(interval);
     };
-  }, []);
+  }, [location]);
 
   return (
     <div>
