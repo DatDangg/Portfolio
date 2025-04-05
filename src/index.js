@@ -1,17 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Header from './components/layout/Header';
 import MainLayout from './components/layout/MainLayout';
 
-import './assets/css/base.css'
+import './assets/css/base.css';
 import App from './App';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
       <MainLayout>
@@ -19,7 +18,8 @@ root.render(
         <App />
       </MainLayout>
     </BrowserRouter>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
 reportWebVitals();
