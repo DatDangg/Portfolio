@@ -8,6 +8,7 @@ import styles from "./Resume.module.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
 function Resume() {
+    const pdfUrl = "https://raw.githubusercontent.com/DatDangg/Portfolio/main/public/resume.docx.pdf";
     const [width, setWidth] = useState(window.innerWidth);
 
     useEffect(() => {
@@ -45,7 +46,7 @@ function Resume() {
                 </div>
                 <div className="row">
                     <Document
-                        file="/resume.docx.pdf"
+                        file={pdfUrl}
                         loading={<p className={styles.loading}>Loading PDF...</p>}
                         className="d-flex justify-content-center"
                     >
