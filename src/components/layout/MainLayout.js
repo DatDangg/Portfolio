@@ -92,8 +92,10 @@ const MainLayout = ({ children }) => {
     window.addEventListener("resize", resizeHandler);
 
     resizeObserverRef.current = new ResizeObserver(() => {
-      createStar();
-    });
+      requestAnimationFrame(() => {
+        createStar();
+      });
+    });    
 
     resizeObserverRef.current.observe(document.body); // hoặc document.querySelector('#root')
 

@@ -10,41 +10,25 @@ function About() {
                             Know Who <span>I'M</span>
                         </div>
                         <p>
-                            Eiusmod ipsum sunt Lorem nulla fugiat Lorem anim nulla. In mollit
-                            adipisicing dolore ut culpa elit consectetur eiusmod irure nostrud
-                            Lorem. Eu aliqua anim irure cupidatat incididunt magna commodo
-                            adipisicing officia nisi ad. Reprehenderit dolor eiusmod nulla in
-                            duis ex culpa consequat et nostrud cupidatat enim non ex. Eu
-                            veniam et eiusmod nostrud irure eiusmod veniam amet reprehenderit
-                            ex aliqua. Fugiat reprehenderit ex qui occaecat incididunt
-                            pariatur adipisicing id dolor magna eu. Ex enim reprehenderit ut
-                            officia cupidatat sit exercitation consequat nostrud cillum est
-                            laborum ut.
+                            Hi everyone, I am Dang Dat from Thanh Tri, Ha Noi.
                         </p>
                         <p>
-                            Eiusmod ipsum sunt Lorem nulla fugiat Lorem anim nulla. In mollit
-                            adipisicing dolore ut culpa elit consectetur eiusmod irure nostrud
-                            Lorem. Eu aliqua anim irure cupidatat incididunt magna commodo
-                            adipisicing officia nisi ad. Reprehenderit dolor eiusmod nulla in
-                            duis ex culpa consequat et nostrud cupidatat enim non ex. Eu
-                            veniam et eiusmod nostrud irure eiusmod veniam amet reprehenderit
-                            ex aliqua. Fugiat reprehenderit ex qui occaecat incididunt
-                            pariatur adipisicing id dolor magna eu. Ex enim reprehenderit ut
-                            officia cupidatat sit exercitation consequat nostrud cillum est
-                            laborum ut.
+                            I'm a final-year Computer Science student at Thang Long University, currently focusing 
+                            on front-end development. I enjoy building interactive and user-friendly web applications, 
+                            and I'm passionate about creating clean, responsive designs that enhance user experience.
                         </p>
                         <p>
-                            Eiusmod ipsum sunt Lorem nulla fugiat Lorem anim nulla. In mollit
-                            adipisicing dolore ut culpa elit consectetur eiusmod irure nostrud
-                            Lorem. Eu aliqua anim irure cupidatat incididunt magna commodo
-                            adipisicing officia nisi ad. Reprehenderit dolor eiusmod nulla in
-                            duis ex culpa consequat et nostrud cupidatat enim non ex. Eu
-                            veniam et eiusmod nostrud irure eiusmod veniam amet reprehenderit
-                            ex aliqua. Fugiat reprehenderit ex qui occaecat incididunt
-                            pariatur adipisicing id dolor magna eu. Ex enim reprehenderit ut
-                            officia cupidatat sit exercitation consequat nostrud cillum est
-                            laborum ut.
+                            Beyond technical interests, I serve as Head of Human Resources at the 
+                            Psychological Counseling Club, where I coordinate events and support team morale through one-on-one check-ins.
                         </p>
+                        <p>
+                            I'm also passionate about personal growth, learning languages like Chinese, and creative hobbies such as crocheting and volunteering.
+                        </p>
+                        <p style={{fontSize: "2.4rem"}}><span>Soft Skills</span></p>
+                        <p className={styles.softSkills}>👉  Strong presentation and public speaking skills</p>
+                        <p className={styles.softSkills}>👉  Excellent self-learning and research abilities</p>
+                        <p className={styles.softSkills}>👉  Effective communication and collaboration</p>
+                        <p className={styles.softSkills}>👉  Teamwork-oriented with leadership experience</p>
                         <div className={styles.quote}>"Love pain to be the best"</div>
                     </div>
                 </div>

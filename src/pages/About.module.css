@@ -28,6 +28,10 @@
     text-align: justify;
 }
 
+.softSkills {
+    margin-left: 40px;
+}
+
 .quote {
     color: #c889e6;
     font-size: 2rem;

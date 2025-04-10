@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import styles from "./Home.module.css";
 import bannerImg from "../assets/image/banner-img.png";
+import avatar from "../assets/image/avatar.svg"
 
 function TypeWriter({ texts }) {
     const [displayText, setDisplayText] = useState("");
@@ -60,7 +61,7 @@ function Home() {
                                 I'm <span>Dang Dat</span>
                             </div>
                             <div className={styles.typeWriter}>
-                                <TypeWriter texts={["Front End Developer", "Team Leader"]} />
+                                <TypeWriter texts={["Front End Developer"]} />
                             </div>
                         </div>
                     </div>
@@ -107,7 +108,7 @@ function Home() {
                     <div className="col-lg-4">
                         <img
                             className={styles.bannerImg}
-                            src={bannerImg}
+                            src={avatar}
                             alt="Banner Image"
                         ></img>
                     </div>
