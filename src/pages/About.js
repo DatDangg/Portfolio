@@ -9,26 +9,38 @@ function About() {
                         <div className={styles.aboutTitle}>
                             Know Who <span>I'M</span>
                         </div>
+                        <p>Hi everyone, I am Dang Dat from Thanh Tri, Ha Noi.</p>
                         <p>
-                            Hi everyone, I am Dang Dat from Thanh Tri, Ha Noi.
+                            I'm a final-year Computer Science student at Thang Long
+                            University, currently focusing on front-end development. I enjoy
+                            building interactive and user-friendly web applications, and I'm
+                            passionate about creating clean, responsive designs that enhance
+                            user experience.
                         </p>
                         <p>
-                            I'm a final-year Computer Science student at Thang Long University, currently focusing 
-                            on front-end development. I enjoy building interactive and user-friendly web applications, 
-                            and I'm passionate about creating clean, responsive designs that enhance user experience.
+                            Beyond technical interests, I serve as Head of Human Resources at
+                            the Psychological Counseling Club, where I coordinate events and
+                            support team morale through one-on-one check-ins.
                         </p>
                         <p>
-                            Beyond technical interests, I serve as Head of Human Resources at the 
-                            Psychological Counseling Club, where I coordinate events and support team morale through one-on-one check-ins.
+                            I'm also passionate about personal growth, learning languages like
+                            Chinese, and creative hobbies such as crocheting and volunteering.
                         </p>
-                        <p>
-                            I'm also passionate about personal growth, learning languages like Chinese, and creative hobbies such as crocheting and volunteering.
+                        <p style={{ fontSize: "2.4rem" }}>
+                            <span>Soft Skills</span>
                         </p>
-                        <p style={{fontSize: "2.4rem"}}><span>Soft Skills</span></p>
-                        <p className={styles.softSkills}>👉  Strong presentation and public speaking skills</p>
-                        <p className={styles.softSkills}>👉  Excellent self-learning and research abilities</p>
-                        <p className={styles.softSkills}>👉  Effective communication and collaboration</p>
-                        <p className={styles.softSkills}>👉  Teamwork-oriented with leadership experience</p>
+                        <p className={styles.softSkills}>
+                            👉 Strong presentation and public speaking skills
+                        </p>
+                        <p className={styles.softSkills}>
+                            👉 Excellent self-learning and research abilities
+                        </p>
+                        <p className={styles.softSkills}>
+                            👉 Effective communication and collaboration
+                        </p>
+                        <p className={styles.softSkills}>
+                            👉 Teamwork-oriented with leadership experience
+                        </p>
                         <div className={styles.quote}>"Love pain to be the best"</div>
                     </div>
                 </div>
@@ -161,6 +173,23 @@ function About() {
                             <path
                                 fill="currentColor"
                                 d="M13.527.099C6.955-.744.942 3.9.099 10.473c-.843 6.572 3.8 12.584 10.373 13.428 6.573.843 12.587-3.801 13.428-10.374C24.744 6.955 20.101.943 13.527.099zm2.471 7.485a.855.855 0 0 0-.593.25l-4.453 4.453-.307-.307-.643-.643c4.389-4.376 5.18-4.418 5.996-3.753zm-4.863 4.861l4.44-4.44a.62.62 0 1 1 .847.903l-4.699 4.125-.588-.588zm.33.694l-1.1.238a.06.06 0 0 1-.067-.032.06.06 0 0 1 .01-.073l.645-.645.512.512zm-2.803-.459l1.172-1.172.879.878-1.979.426a.074.074 0 0 1-.085-.039.072.072 0 0 1 .013-.093zm-3.646 6.058a.076.076 0 0 1-.069-.083.077.077 0 0 1 .022-.046h.002l.946-.946 1.222 1.222-2.123-.147zm2.425-1.256a.228.228 0 0 0-.117.256l.203.865a.125.125 0 0 1-.211.117h-.003l-.934-.934-.294-.295 3.762-3.758 1.82-.393.874.874c-1.255 1.102-2.971 2.201-5.1 3.268zm5.279-3.428h-.002l-.839-.839 4.699-4.125a.952.952 0 0 0 .119-.127c-.148 1.345-2.029 3.245-3.977 5.091zm3.657-6.46l-.003-.002a1.822 1.822 0 0 1 2.459-2.684l-1.61 1.613a.119.119 0 0 0 0 .169l1.247 1.247a1.817 1.817 0 0 1-2.093-.343zm2.578 0a1.714 1.714 0 0 1-.271.218h-.001l-1.207-1.207 1.533-1.533c.661.72.637 1.832-.054 2.522zM18.855 6.05a.143.143 0 0 0-.053.157.416.416 0 0 1-.053.45.14.14 0 0 0 .023.197.141.141 0 0 0 .084.03.14.14 0 0 0 .106-.05.691.691 0 0 0 .087-.751.138.138 0 0 0-.194-.033z"
+                            ></path>
+                        </svg>
+                    </div>
+                    <div className={`col-md-2 ${styles.aboutIcon}`}>
+                        <svg
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            height="1em"
+                            width="1em"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M12 3H9C7.34315 3 6 4.34315 6 6C6 7.65685 7.34315 9 9 9M12 3V9M12 3H15C16.6569 3 18 4.34315 18 6C18 7.65685 16.6569 9 15 9M12 9H9M12 9H15M12 9V15M9 9C7.34315 9 6 10.3431 6 12C6 13.6569 7.34315 15 9 15M15 9C16.6569 9 18 10.3431 18 12C18 13.6569 16.6569 15 15 15C13.3431 15 12 13.6569 12 12C12 10.3431 13.3431 9 15 9ZM12 15H9M12 15V18C12 19.6569 10.6569 21 9 21C7.34315 21 6 19.6569 6 18C6 16.3431 7.34315 15 9 15"
+                                stroke="#ffffff"
+                                strokeWidth="2"
+                                strokelinecap="round"
+                                strokelinejoin="round"
                             ></path>
                         </svg>
                     </div>
