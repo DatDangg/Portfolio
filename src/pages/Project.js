@@ -1,6 +1,7 @@
 import styles from "./Project.module.css";
 import projectImage from "../assets/image/prj-img.png";
 import projectImage1 from "../assets/image/prj-img1.png";
+import projectImage2 from "../assets/image/prj-img2.png";
 
 function Project() {
     return (
